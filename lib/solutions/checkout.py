@@ -22,7 +22,7 @@ items_rules = {
 
 def checkout(skus):
 
-    if not isinstance(skus, basestring):
+    if not isinstance(skus, str):
         return -1
 
     total = 0
@@ -48,3 +48,5 @@ def checkout(skus):
             total += price
 
     return total
+
+print(checkout("AAABBCD"))
