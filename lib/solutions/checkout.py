@@ -40,6 +40,8 @@ def checkout(skus):
             if sku in items_rules:
                 if count_items.count(sku) % items_rules[sku]['items'] == 0:
                     price = items_prices[sku] * items_rules[sku]['items'] - items_rules[sku]['price']
+                else:
+                    price = items_prices[sku]
             else:
                 price = items_prices[sku]
 
