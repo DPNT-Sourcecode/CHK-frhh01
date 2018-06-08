@@ -80,6 +80,7 @@ def checkout(skus):
         for i in range(0, count):
             skus += item
 
+
     # Do discounts
     discount = 0
     while True:
@@ -104,3 +105,5 @@ def checkout(skus):
     total -= discount
 
     return total
+
+print(checkout("EEB"))
