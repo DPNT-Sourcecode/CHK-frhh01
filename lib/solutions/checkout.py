@@ -41,7 +41,6 @@ items_free = {
 
 def checkout(skus):
 
-    count_items = []
     items_count = {}
 
     total = 0
@@ -57,18 +56,6 @@ def checkout(skus):
                 items_count[sku] = 0
 
             items_count[sku] += 1
-
-            # count_items.append(sku)
-
-            # if sku in items_rules:
-            #     if count_items.count(sku) % items_rules[sku]['items'] == 0:
-            #         price = items_prices[sku] - items_rules[sku]['sub']
-            #     else:
-            #         price = items_prices[sku]
-            # else:
-            #     price = items_prices[sku]
-            #
-            # total += price
 
         else:
             return -1
@@ -104,7 +91,6 @@ def checkout(skus):
                 if item == item_count:
                     for rule in rules:
                         if count >= rule["items"]:
-                            print(rule["sub"])
                             discount += rule["sub"]
                             # Remove discounted items
                             items_count[item] -= rule["items"]
@@ -116,11 +102,6 @@ def checkout(skus):
     # Calculate total
     for sku in skus:
         total += items_prices[sku]
-    #total -= discount
-
-    print(total)
+    total -= discount
 
     return total
-
-
-checkout("AAAAABBBBEE")
