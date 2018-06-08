@@ -7,6 +7,16 @@ items_prices = {
     'C': 20,
     'D': 15
 }
+items_rules = {
+    'A': {
+        'items': 3,
+        'price': 130
+    },
+    'B': {
+        'items': 2,
+        'price': 45
+    }
+}
 
 
 
@@ -22,7 +32,13 @@ def checkout(skus):
     skus = list(skus)
 
     for sku in skus:
+        # Check if it is a valid item
         if sku in items_prices:
+
+            count_items.append(sku)
+
+            
+
             total += items_prices[sku]
 
     return total
