@@ -78,8 +78,10 @@ def checkout(skus):
         for item_free, options in items_free.iteritems():
             if item_free == item:
                 if options[0]["action"] == "free":
+
                     # Define how many items are for free
                     n_free_items = int(items_count[options[0]['item']] / options[0]['quantity'])
+
                     # Remove items
                     items_count[options[0]['item']] -= n_free_items
                     if items_count[options[0]['item']] < 0:
@@ -91,6 +93,7 @@ def checkout(skus):
         for i in range(0, count):
             skus += item
 
+    print(items_count)
     # Do discounts
     for item, rules in items_rules.iteritems():
         print(item)
