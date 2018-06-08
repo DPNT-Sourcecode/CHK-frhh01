@@ -22,16 +22,16 @@ items_rules = {
 
 def checkout(skus):
 
-    total = -1
     count_items = []
-
+    match_items = False
+    total = 0
     # Divide string in a list of letters
     skus = list(skus)
 
     for sku in skus:
         # Check if it is a valid item
         if sku in items_prices:
-
+            match_items = True
             count_items.append(sku)
 
             if sku in items_rules:
@@ -42,7 +42,8 @@ def checkout(skus):
             else:
                 price = items_prices[sku]
 
-            print(price)
             total += price
 
-    return total
+    if match_items:
+        return total
+    return -1
