@@ -42,7 +42,7 @@ items_free = {
 def checkout(skus):
 
     count_items = []
-    items_count = []
+    items_count = {}
 
     total = 0
     # Divide string in a list of letters
@@ -58,7 +58,7 @@ def checkout(skus):
 
             items_count[sku] += 1
 
-            count_items.append(sku)
+            # count_items.append(sku)
 
             # if sku in items_rules:
             #     if count_items.count(sku) % items_rules[sku]['items'] == 0:
@@ -72,7 +72,7 @@ def checkout(skus):
 
         else:
             return -1
-    print(count_items)
+    print(items_count)
 
     return total
 
