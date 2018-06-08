@@ -85,7 +85,13 @@ def checkout(skus):
                     if items_count[options[0]['item']] < 0:
                         items_count[options[0]['item']] = 0
 
-    # R
+    # Recreate skus
+    skus = ""
+    for item in items_count:
+        print(item)
+        for i in range(1, count):
+            skus += item
+    print(skus)
 
     # Do discounts
 
