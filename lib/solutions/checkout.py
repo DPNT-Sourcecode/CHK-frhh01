@@ -95,13 +95,17 @@ def checkout(skus):
 
     # Do discounts
     discount = 0
-    for item, rules in items_rules.iteritems():
-        for item_count, count in items_count.iteritems():
-            if item == item_count:
-                for rule in rules:
-                    if count >= rule["items"]:
-                        discount += rule["sub"]
-                        # Remove discounted items
+    discountMatch = True
+
+    while(discountMatch == True):
+        for item, rules in items_rules.iteritems():
+            for item_count, count in items_count.iteritems():
+                if item == item_count:
+                    for rule in rules:
+                        if count >= rule["items"]:
+                            discount += rule["sub"]
+                            # Remove discounted items
+                            items_count[item] -= rule["items"]
 
 
     return total
