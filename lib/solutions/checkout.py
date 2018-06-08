@@ -74,9 +74,9 @@ def checkout(skus):
             return -1
 
     for item, count in items_count.iteritems():
-        for item_free, options in items_free:
+        for item_free, options in items_free.iteritems():
             print(item_free)
-            print(options)
+            print(options[0]["action"])
 
 
 
