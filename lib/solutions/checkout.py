@@ -10,11 +10,11 @@ items_prices = {
 items_rules = {
     'A': {
         'items': 3,
-        'price': 130
+        'sub': 20
     },
     'B': {
         'items': 2,
-        'price': 45
+        'sub': 15
     }
 }
 
@@ -39,14 +39,13 @@ def checkout(skus):
 
             if sku in items_rules:
                 if count_items.count(sku) % items_rules[sku]['items'] == 0:
-                    price = items_prices[sku] * items_rules[sku]['items'] - items_rules[sku]['price']
+                    price = items_prices[sku] - items_rules[sku]['sub']
                 else:
                     price = items_prices[sku]
             else:
                 price = items_prices[sku]
 
+            print(price)
             total += price
 
     return total
-
-print(checkout("AAABBCD"))
