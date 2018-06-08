@@ -40,7 +40,7 @@ items_free = {
 
 
 def checkout(skus):
-    return 0
+    
     items_count = {}
 
     total = 0
