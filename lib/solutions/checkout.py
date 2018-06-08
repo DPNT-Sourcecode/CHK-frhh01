@@ -9,15 +9,19 @@ items_prices = {
 }
 
 
+
 def checkout(skus):
 
     if not isinstance(skus, basestring):
         return -1
 
+    total = 0
+    count_items = []
+
     # Divide string in a list of letters
     skus = list(skus)
 
-    
+    for sku in skus:
+        total += items_prices[skus]
 
-
-    raise NotImplementedError()
+    return total
