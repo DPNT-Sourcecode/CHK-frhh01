@@ -39,31 +39,42 @@ items_free = {
 }
 
 
-
 def checkout(skus):
 
     count_items = []
+    items_count = []
 
     total = 0
     # Divide string in a list of letters
     skus = list(skus)
 
     for sku in skus:
+
         # Check if it is a valid item
         if sku in items_prices:
+
+            if sku not in items_count:
+                items_count[sku] = 0
+
+            items_count[sku] += 1
+
             count_items.append(sku)
 
-            if sku in items_rules:
-                if count_items.count(sku) % items_rules[sku]['items'] == 0:
-                    price = items_prices[sku] - items_rules[sku]['sub']
-                else:
-                    price = items_prices[sku]
-            else:
-                price = items_prices[sku]
+            # if sku in items_rules:
+            #     if count_items.count(sku) % items_rules[sku]['items'] == 0:
+            #         price = items_prices[sku] - items_rules[sku]['sub']
+            #     else:
+            #         price = items_prices[sku]
+            # else:
+            #     price = items_prices[sku]
+            #
+            # total += price
 
-            total += price
         else:
             return -1
+    print(count_items)
 
     return total
 
+
+checkout("AAAAABBBBEE")
