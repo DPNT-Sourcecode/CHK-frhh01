@@ -79,7 +79,6 @@ def checkout(skus):
     for item, count in items_count.iteritems():
         for i in range(0, count):
             skus += item
-    print(skus)
 
     # Do discounts
     discount = 0
@@ -105,3 +104,6 @@ def checkout(skus):
     total -= discount
 
     return total
+
+
+print(checkout("B"))
