@@ -73,17 +73,20 @@ def checkout(skus):
         else:
             return -1
 
+    # Remove items if there are some discounts
     for item, count in items_count.iteritems():
         for item_free, options in items_free.iteritems():
             if item_free == item:
                 if options[0]["action"] == "free":
                     # Define how many items are for free
-                    n_free_items = int(items_count['B'] / options[0]['quantity'])
+                    n_free_items = int(items_count[options[0]['item']] / options[0]['quantity'])
                     # Remove items
-                    items_count['B'] -= n_free_items
-                    print(items_count)
+                    items_count[options[0]['item']] -= n_free_items
+                    if items_count[options[0]['item']] < 0:
+                        items_count[options[0]['item']] = 0
 
 
+    # Do discounts
 
 
     return total
