@@ -77,7 +77,9 @@ def checkout(skus):
         for item_free, options in items_free.iteritems():
             if item_free == item:
                 if options[0]["action"] == "free":
-                    print(count)
+                    # Define how many items are for free
+                    n_free_items = int(count / options[0]['quantity'])
+                    print(n_free_items)
 
 
 
