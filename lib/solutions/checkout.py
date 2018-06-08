@@ -72,7 +72,13 @@ def checkout(skus):
 
         else:
             return -1
-    print(items_count)
+
+    for item, count in items_count.iteritems():
+        for item_free, options in items_free:
+            print(item_free)
+            print(options)
+
+
 
     return total
 
