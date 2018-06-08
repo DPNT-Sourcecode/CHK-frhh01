@@ -22,6 +22,7 @@ def checkout(skus):
     skus = list(skus)
 
     for sku in skus:
-        total += items_prices[skus]
+        if sku in items_prices:
+            total += items_prices[sku]
 
     return total
