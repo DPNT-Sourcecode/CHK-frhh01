@@ -22,10 +22,7 @@ items_rules = {
 
 def checkout(skus):
 
-    if not isinstance(skus, str):
-        return -1
-
-    total = 0
+    total = -1
     count_items = []
 
     # Divide string in a list of letters
