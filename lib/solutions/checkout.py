@@ -93,12 +93,14 @@ def checkout(skus):
         for i in range(0, count):
             skus += item
 
-    print(items_count)
     # Do discounts
     for item, rules in items_rules.iteritems():
-        print(item)
-        print(rules)
-
+        for item_count, count in items_count.iteritems():
+            if item == item_count:
+                print(item)
+                print(rules)
+                print(count)
+                print("")
 
     return total
 
