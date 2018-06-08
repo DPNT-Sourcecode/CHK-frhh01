@@ -69,11 +69,10 @@ def checkout(skus):
                     # Define how many items are for free
                     if options[0]['item'] in items_count:
                         n_free_items = int(items_count[options[0]['item']] / options[0]['quantity'])
-
-                    # Remove items
-                    items_count[options[0]['item']] -= n_free_items
-                    if items_count[options[0]['item']] < 0:
-                        items_count[options[0]['item']] = 0
+                        # Remove items
+                        items_count[options[0]['item']] -= n_free_items
+                        if items_count[options[0]['item']] < 0:
+                            items_count[options[0]['item']] = 0
 
     # Recreate skus
     skus = ""
@@ -105,5 +104,3 @@ def checkout(skus):
     total -= discount
 
     return total
-
-checkout("E")
