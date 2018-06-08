@@ -8,14 +8,30 @@ items_prices = {
     'D': 15
 }
 items_rules = {
-    'A': {
-        'items': 3,
-        'sub': 20
-    },
-    'B': {
-        'items': 2,
-        'sub': 15
-    }
+    'A': [
+        {
+            'items': 5,
+            'sub': 50
+        },
+        {
+            'items': 3,
+            'sub': 20
+        }
+    ],
+    'B': [
+        {
+            'items': 2,
+            'sub': 15
+        }
+    ]
+}
+
+items_free = {
+    'E': [
+        {
+            ''
+        }
+    ]
 }
 
 
