@@ -7,6 +7,6 @@ def checkout(skus):
 
     # Divide string in a list of letters
     skus = list(skus)
-    
+
 
     raise NotImplementedError()
