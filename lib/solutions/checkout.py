@@ -94,13 +94,15 @@ def checkout(skus):
             skus += item
 
     # Do discounts
+    discount = 0
     for item, rules in items_rules.iteritems():
         for item_count, count in items_count.iteritems():
             if item == item_count:
-                print(item)
-                print(rules)
-                print(count)
-                print("")
+                for rule in rules:
+                    if count >= rule["items"]:
+                        discount += rule["sub"]
+                        # Remove discounted items
+
 
     return total
 
