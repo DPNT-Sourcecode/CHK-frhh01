@@ -37,8 +37,12 @@ def checkout(skus):
 
             count_items.append(sku)
 
-            
+            if sku in items_rules:
+                if count_items.count(sku) % items_rules[sku]['items'] == 0:
+                    price = items_prices[sku] * items_rules[sku]['items'] - items_rules[sku]['price']
+            else:
+                price = items_prices[sku]
 
-            total += items_prices[sku]
+            total += price
 
     return total
