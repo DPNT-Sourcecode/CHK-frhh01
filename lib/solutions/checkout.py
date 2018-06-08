@@ -85,6 +85,7 @@ def checkout(skus):
                     if items_count[options[0]['item']] < 0:
                         items_count[options[0]['item']] = 0
 
+    # R
 
     # Do discounts
 
