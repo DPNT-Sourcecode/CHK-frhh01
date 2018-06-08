@@ -92,6 +92,7 @@ def checkout(skus):
                             discount += rule["sub"]
                             # Remove discounted items
                             count -= rule["items"]
+                            items_count[item] -= rule["items"]
                             discountMatch = True
 
         if not discountMatch:
@@ -103,6 +104,3 @@ def checkout(skus):
     total -= discount
 
     return total
-
-
-print(checkout("AAAAAA"))
