@@ -107,7 +107,7 @@ def checkout(skus):
     for sku in skus:
         total += items_prices[sku]
     total -= discount
-    print("")
+
     return total
 
-print(checkout("AAAAAAAAAA"))
+print(checkout("EEEB"))
