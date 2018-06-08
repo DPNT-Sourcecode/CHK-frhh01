@@ -91,9 +91,7 @@ def checkout(skus):
                 if item == item_count:
                     for rule in rules:
                         if count >= rule["items"]:
-                            print("{} - {}".format(count, rule["items"]))
                             discount += rule["sub"]
-                            print(rule["sub"])
                             # Remove discounted items
                             count -= rule["items"]
                             items_count[item] -= rule["items"]
@@ -109,5 +107,3 @@ def checkout(skus):
     total -= discount
 
     return total
-
-print(checkout("EEEB"))
