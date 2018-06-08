@@ -87,13 +87,14 @@ def checkout(skus):
 
     # Recreate skus
     skus = ""
-    for item in items_count:
-        print(item)
-        for i in range(1, count):
+    for item, count in items_count.iteritems():
+        for i in range(0, count):
             skus += item
-    print(skus)
 
     # Do discounts
+    for item, rules in items_rules.iteritems():
+        print(item)
+        print(rules)
 
 
     return total
