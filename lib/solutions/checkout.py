@@ -119,14 +119,14 @@ items_free = {
             'n_free_items': 1
         }
     ],
-    'U': [
-        {
-            'quantity': 3,
-            'action': 'free',
-            'item': 'U',
-            'n_free_items': 1
-        }
-    ]
+    # 'U': [
+    #     {
+    #         'quantity': 3,
+    #         'action': 'free',
+    #         'item': 'U',
+    #         'n_free_items': 1
+    #     }
+    # ]
 }
 
 
@@ -199,4 +199,4 @@ def checkout(skus):
 
     return total
 
-print(checkout("HHHHHHHHHHH"))
+print(checkout("UUU"))
