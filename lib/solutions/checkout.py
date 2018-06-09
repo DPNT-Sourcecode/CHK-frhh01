@@ -198,3 +198,5 @@ def checkout(skus):
     total -= discount
 
     return total
+
+print(checkout("HHHHHHHHHH"))
