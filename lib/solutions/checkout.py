@@ -7,7 +7,27 @@ items_prices = {
     'C': 20,
     'D': 15,
     'E': 40,
-    'F': 10
+    'F': 10,
+    'G': 20,
+    'H': 10,
+    'I': 35,
+    'J': 60,
+    'K': 80,
+    'L': 90,
+    'M': 15,
+    'N': 40,
+    'O': 10,
+    'P': 50,
+    'Q': 30,
+    'R': 50,
+    'S': 30,
+    'T': 20,
+    'U': 40,
+    'V': 50,
+    'W': 20,
+    'X': 90,
+    'Y': 10,
+    'Z': 50,
 }
 items_rules = {
     'A': [
@@ -24,6 +44,44 @@ items_rules = {
         {
             'items': 2,
             'sub': 15
+        }
+    ],
+    'H': [
+        {
+            'items': 5,
+            'sub': 5
+        },
+        {
+            'items': 10,
+            'sub': 20
+        }
+    ],
+    'K': [
+        {
+            'items': 2,
+            'sub': 10
+        }
+    ],
+    'P': [
+        {
+            'items': 5,
+            'sub': 50
+        }
+    ],
+    'Q': [
+        {
+            'items': 3,
+            'sub': 10
+        }
+    ],
+    'V': [
+        {
+            'items': 3,
+            'sub': 20
+        },
+        {
+            'items': 2,
+            'sub': 10
         }
     ]
 }
@@ -42,6 +100,30 @@ items_free = {
             'quantity': 3,
             'action': 'free',
             'item': 'F',
+            'n_free_items': 1
+        }
+    ],
+    'N': [
+        {
+            'quantity': 3,
+            'action': 'free',
+            'item': 'M',
+            'n_free_items': 1
+        }
+    ],
+    'R': [
+        {
+            'quantity': 3,
+            'action': 'free',
+            'item': 'Q',
+            'n_free_items': 1
+        }
+    ],
+    'U': [
+        {
+            'quantity': 3,
+            'action': 'free',
+            'item': 'U',
             'n_free_items': 1
         }
     ]
