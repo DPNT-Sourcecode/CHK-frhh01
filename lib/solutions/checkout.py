@@ -48,12 +48,12 @@ items_rules = {
     ],
     'H': [
         {
-            'items': 5,
-            'sub': 5
-        },
-        {
             'items': 10,
             'sub': 20
+        },
+        {
+            'items': 5,
+            'sub': 5
         }
     ],
     'K': [
@@ -199,4 +199,4 @@ def checkout(skus):
 
     return total
 
-print(checkout("HHHHHHHHHH"))
+print(checkout("HHHHHHHHHHH"))
