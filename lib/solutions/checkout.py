@@ -7,6 +7,7 @@ items_prices = {
     'C': 20,
     'D': 15,
     'E': 40,
+    'F': 10
 }
 items_rules = {
     'A': [
@@ -33,6 +34,14 @@ items_free = {
             'quantity': 2,
             'action': 'free',
             'item': 'B',
+            'n_free_items': 1
+        }
+    ],
+    'F': [
+        {
+            'quantity': 3,
+            'action': 'free',
+            'item': 'F',
             'n_free_items': 1
         }
     ]
